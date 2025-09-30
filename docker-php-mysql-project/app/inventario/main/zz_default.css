@@ -1,0 +1,129 @@
+.linesolid {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif, Helvetica; BACKGROUND-COLOR: #666666
+}
+.pagetabtitles {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif; BACKGROUND-COLOR: #0099CC; TEXT-DECORATION: none
+}
+.mainsmall {
+	FONT-SIZE: 9px; BACKGROUND-COLOR: #ffffff
+}
+
+.linedotted {
+	BACKGROUND-COLOR: #c9cee0
+}
+.main {
+	BACKGROUND-COLOR: #ffffff
+}
+.maingri {
+	BACKGROUND-COLOR: #eeeeee
+}
+A.tabmenuslink {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #dfeeff; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+A.tabmenuslink:hover {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.tabmenuslnkcur {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #cc0000; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif; TEXT-DECORATION: none
+}
+A.tabmenuslnkcur:hover {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+A.pagetablink {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #003366; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif, Helvetica; TEXT-DECORATION: none
+}
+A.pagetablink:hover {
+	FONT-WEIGHT: bold; COLOR: #cc0000; TEXT-DECORATION: none
+}
+A.offerlink {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #cc0000; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif, Helvetica; TEXT-DECORATION: none
+}
+A.offerlink:hover {
+	FONT-WEIGHT: bold; COLOR: #006699; TEXT-DECORATION: none
+}
+.productitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif, Helvetica; TEXT-DECORATION: none
+}
+.pagemark {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #cc0000; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif
+}
+.productprice {
+	FONT-WEIGHT: normal; FONT-SIZE: 13px; COLOR: #ff6600; FONT-FAMILY: Arial, Helvetica, sans-serif, Tahoma
+}
+.pagetitle {
+	FONT-WEIGHT: normal; FONT-SIZE: 16px; COLOR: #cc0000; FONT-FAMILY: Arial, Helvetica, sans-serif, Tahoma; TEXT-DECORATION: none
+}
+.mainorange {
+	BACKGROUND-COLOR: #ffb800
+}
+.buttonok {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1px; PADDING-LEFT: 1px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10px; BORDER-BOTTOM-WIDTH: 1px; PADDING-BOTTOM: 1px; COLOR: #ffffff; PADDING-TOP: 1px; FONT-FAMILY: Verdana, Tahoma, Arial, sans-serif, Helvetica; BACKGROUND-COLOR: #336699; BORDER-RIGHT-WIDTH: 1px
+}
+.seperator {
+	FONT-WEIGHT: bolder; FONT-SIZE: 18px; BACKGROUND-COLOR: #ffffff
+}
+.mainorangesearch {
+	BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-BOTTOM: #000000 1px; BACKGROUND-COLOR: #ffb800
+}
+.Estilo3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 9px;
+}
+.Estilo2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.Estilo42 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+}
+.Estilo4 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+}
+.Estilo5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; 
+	 
+}
+.input {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 10px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f7f7f7
+}
+<!--
+.Estilo1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: #000000;
+}
+a:hover {
+	color: #000000;
+}
+a:active {
+	color: #000000;
+}
+.Estilo7 {font-size: 12px}
+.Estilo9 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; }
+.Estilo10 {color: #82ABD4}
+.Estilo11 {
+	color: #000000;
+	font-weight: bold;
+}
+-->
+
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+.Estilo12 {font-size: 24px}
+.Estilo44 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+}

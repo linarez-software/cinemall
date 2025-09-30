@@ -1,0 +1,114 @@
+<?php
+include('../main/valida.php');
+include('../main/conexiones.php');
+
+
+$sql="SELECT
+pv_tbc_encabezado_movimientos.NUMERO_MOVIMIENTO,
+pv_tbc_encabezado_movimientos.FECHA_EMISION,
+a.NOMBRE_ALMACEN AS origen,
+pv_tbc_encabezado_movimientos.OBSERVACION_MOVIMIENTO,
+tbl_usuario.nombre_completo,
+pv_tbc_encabezado_movimientos.STATUS_MOVIMIENTO,
+b.NOMBRE_ALMACEN AS destino
+FROM
+pv_tbc_encabezado_movimientos
+Inner Join pv_tbc_almacenes AS a ON pv_tbc_encabezado_movimientos.ALMACEN_ORIGEN = a.CODIGO_ALMACEN
+Inner Join tbl_usuario ON pv_tbc_encabezado_movimientos.CODIGO_USUARIO = tbl_usuario.id_usuario
+Inner Join pv_tbc_almacenes AS b ON pv_tbc_encabezado_movimientos.ALMACEN_DESTINO = b.CODIGO_ALMACEN
+		";
+	$sql.=" where TIPO_MOVIMIENTO='TRA' and  ID_MOVIMIENTO=".$_GET["id"];
+$result = mysql_query($sql);
+
+while ($rs=mysql_fetch_array($result)){
+	$codigo=str_pad($rs["NUMERO_MOVIMIENTO"], 9-strlen($rs["NUMERO_MOVIMIENTO"]) , '0', STR_PAD_LEFT);
+	$fecha=explode("-",$rs["FECHA_EMISION"]);
+	
+	$htm=$htm."			<table width='720' border='1' cellspacing='0' cellpadding='0'  align='center'>";
+	$htm=$htm."  	<tr  bgcolor='#FF9900'>";
+	$htm=$htm."      ";
+	$htm=$htm."      <td  colspan='4'  bgcolor='#FF9900' height='70' valign='top'><div align='left'><img src='images/logo.jpg' width='60' height='61' /></div></td>";
+	$htm=$htm."    </tr> ";
+	$htm=$htm."              <tr>";
+	$htm=$htm."                <td colspan='4' align='center'  bgcolor='#F1F1F1' ><div align='center'><B>NOTA DE TRANSFERENCIA ENTRE ALAMCENES</B></div></td>";
+	$htm=$htm."              </tr>";
+	$htm=$htm."             <tr>";
+	$htm=$htm."                <td  width='15%'>&nbsp;&nbsp;Nro:</td>";
+	$htm=$htm."                <td width='25%' align='left'>".$codigo."</td>";
+	$htm=$htm."                <td colspan='2'>Emisión:&nbsp;".$fecha[2]."/".$fecha[1]."/".$fecha[0]."</td>";
+	$htm=$htm."             </tr>";
+	$htm=$htm."             <tr>   ";
+	$htm=$htm."                <td  width='15%'>&nbsp;&nbsp;Origen:</td>";
+	$htm=$htm."                <td colspan=3 width='85%' align='left'>     <b>".$rs["origen"]."</b>&nbsp;&nbsp;</td>";
+	$htm=$htm."              </tr>";
+	$htm=$htm."             <tr>   ";
+	$htm=$htm."                <td  width='15%'>&nbsp;&nbsp;Destino:</td>";
+	$htm=$htm."                <td colspan=3 width='85%' align='left'>     <b>".$rs["destino"]."</b>&nbsp;&nbsp;</td>";
+	$htm=$htm."              </tr>";
+	$htm=$htm."             <tr>   ";
+	$htm=$htm."                <td  width='15%'>&nbsp;&nbsp;Observaciones:</td>";
+	$htm=$htm."                <td colspan=3 width='85%' align='left'>     <b>".$rs["OBSERVACION_MOVIMIENTO"]."</b>&nbsp;&nbsp;</td>";
+	$htm=$htm."              </tr>";
+	$htm=$htm."            </table>";
+	$status=$rs["STATUS_MOVIMIENTO"];
+	$login=$rs["nombre_completo"];
+	
+	
+					
+}	
+	
+	$htm=$htm."<table width='720' border='1' cellspacing='0' cellpadding='0'  align='center'>";
+	$htm=$htm."<tr>";
+	$htm=$htm."	<td bgcolor='#F1F1F1'  colspan='5' align='center' >Detalle de NOTA DE TRANSFERENCIA ENTRE ALAMCENES</td>";
+	$htm=$htm."</tr>";
+
+	$htm=$htm."<tr>";
+	$htm=$htm."	<td width='10%' bgcolor='#F1F1F1'  align='center'>Id</td>";
+	$htm=$htm."	<td width='30%' bgcolor='#F1F1F1'  align='center'>Producto</td>";
+	$htm=$htm."	<td width='20%' bgcolor='#F1F1F1'  align='left'>Cantidad Unitaria</td>";
+	$htm=$htm."	<td width='20%' bgcolor='#F1F1F1'  align='left'>Unidad Agrupada</td>";
+	$htm=$htm."	<td width='20%' bgcolor='#F1F1F1'  align='left'>Cantidad Agrupada</td>";
+	$htm=$htm."</tr>";	
+	
+	  
+	
+	$sql="SELECT a.*,
+			b.DESCRIPCION_UNIDAD_AGRUPADA
+		FROM
+		pv_tbl_detalle_movimientos AS a Inner Join pv_tbc_unidades AS b ON a.CODIGO_UNIDAD_AGRUPADA = b.CODIGO_UNIDAD_AGRUPADA
+		";
+	$sql.=" where ID_MOVIMIENTO=".$_GET["id"]." order by 2";
+	$i=1;
+	$total=0;
+	$total2=0;
+	$result = mysql_query($sql);
+			while ($rs=mysql_fetch_array($result)){
+					$htm=$htm."<tr>";
+					$htm=$htm."	<td width='10%'  align='CENTER'>".$i."</td>";
+					$htm=$htm."	<td width='30%'  align='left'>".$rs["DESCRIPCION_UNITARIA"]."</td>";
+					$htm=$htm."	<td width='20%'  align='left'>".number_format($rs["CANTIDAD_UNITARIA"],0)." </td>";
+					$htm=$htm."	<td width='20%'  align='left'>$rs[DESCRIPCION_UNIDAD_AGRUPADA]</td>";
+					$htm=$htm."	<td width='20%'  align='left'>".number_format(($rs["CANTIDAD_UNITARIA"]/$rs["CANTIDAD_AGRUPADA"]),2)."</td>";
+					$htm=$htm."</tr>";	
+				
+				$i++;
+				$total=$total+$rs["CANTIDAD_UNITARIA"];
+				$total2=$total2+($rs["CANTIDAD_UNITARIA"]/$rs["CANTIDAD_AGRUPADA"]);
+				
+			} 
+		$htm=$htm."<tr>";
+		$htm=$htm."	<td bgcolor='#F1F1F1'  colspan='2' align='right'>Total:</td>";
+		$htm=$htm."	<td bgcolor='#F1F1F1'  align='left'>".number_format($total,2)."</td>";
+		$htm=$htm."	<td bgcolor='#F1F1F1'  align='left'>&nbsp;</td>";
+		$htm=$htm."	<td bgcolor='#F1F1F1'  align='left'>".number_format(($total2),2)."</td>";
+		$htm=$htm."</tr>";
+		$htm=$htm."<tr>";
+		$htm=$htm."	<td bgcolor='#F1F1F1'  colspan='5' align='right'><br><br><br></td>";
+		$htm=$htm."</tr>";
+		  
+		$htm=$htm."      </table>";
+	
+	echo $htm.$htm2;
+	exit();
+	
+?>

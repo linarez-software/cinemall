@@ -1,0 +1,68 @@
+<?php
+$status = 0;
+$mensaje = "";
+
+$qryD = "SELECT id_pelicula_distribuidor, id_pelicula, fecha_inicio, fecha_fin, porcentaje FROM tbl_pelicula_distribuidor ";
+$qryD .= "WHERE id_pelicula = $idp ";
+$resultD = @mysql_query($qryD, $cnn) or die("Error 3001: ".mysql_error());
+
+?>
+<html>
+<head>
+<title>Pelicula - Distribuidor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+function Buscar(){
+	document.pelicula_distribuidor.action = 'pelicula_distribuidor-buscar.php';
+	document.pelicula_distribuidor.submit();
+}
+</script>
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<?php
+if (strlen($mensaje)>0):
+	$tabla = "<tr><td width='100%' class='css-mensaje-metadata'>$mensaje</td></tr>";
+	echo $tabla;
+endif;
+?>
+<form name="pelicula_distribuidor" method="post" action="">
+<tr>
+	<td>
+		<table width="300" cellpadding="1" cellspacing="1" bgcolor="#FFFFFF">
+        	<!--<tr bgcolor="#DDDDDD">
+				<td width="10%" height="20" class="css-label-metadata" align="center">#</td>
+				<td width="35%" height="20" class="css-label-metadata" align="center">Inicio</td>
+                <td width="20%" height="20" class="css-label-metadata" align="center">%</td>
+                <td width="15%" height="20" class="css-label-metadata" align="center" valign="middle">&nbsp;</td>
+			</tr>-->
+            <tr bgcolor="#DDDDDD">
+				<!--<td width="10%" height="20" class="css-label-metadata" align="center">&nbsp;</td>-->
+				<td width="35%" height="20" class="css-label-metadata" align="center">
+                	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+                    	<td width="75%" align="center"><input name="fecha1" type="text" class="css-campo-metadata" id="fecha1" size="12" readonly></td>
+                        <td width="25%" align="center"><a href="javascript:showCal('fecha1');"><img src="images/img-calendario.gif" border="0" onMouseOut="this.src='images/img-calendario.gif'" onMouseOver="this.src='images/img-calendario-on.gif'"></a></td>
+					</tr></table>                        
+                <td width="20%" height="20" class="css-label-metadata" align="center"><input name="porc" type="text" class="css-campo-metadata" size="5" maxlength="3" value="0" align="right"></td>
+                <td width="15%" height="20" class="css-label-metadata" align="center" valign="middle"><img src="images/add.png" alt="Agregar" border="0"></td>
+			</tr>
+			<?php 
+				$table = "";
+				$c = 0;
+				while($campoD = mysql_fetch_object($resultD)):
+					$c++;
+					$table .= "<tr> \n \r";
+					// $table .= "<td>".$c."</td> \n \r";
+					$table .= "<td>".$campoD->fecha_inicio."</td> \n \r";
+					$table .= "<td>".$campoD->porcentaje."</td> \n \r";
+					$table .= "<td>".""."</td> \n \r";
+					$table .= "</tr> \n \r";
+				endwhile;
+			?>	
+            <tr bgcolor="#DDDDDD">
+				<td colspan="4">&nbsp;</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</form>
+</table>

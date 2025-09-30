@@ -1,0 +1,180 @@
+<?php
+/* peliculabuscar.php */
+
+include_once "../include/bd.inc.php";
+include_once "include/func.glb.php";
+
+$modulo = MANTENIMIENTO."pelicula";
+
+$nombre_espanol = isset($_POST['nombre_espanol']) ? trim(strtoupper($_POST['nombre_espanol'])) : '';
+$nombre_corto = isset($_POST['nombre_corto']) ? trim(strtoupper($_POST['nombre_corto'])) : '';
+$nombre_ingles = isset($_POST['nombre_ingles']) ? trim(strtoupper($_POST['nombre_ingles'])) : '';
+$id_distribuidor = isset($_POST['id_distribuidor']) ? trim(strtoupper($_POST['id_distribuidor'])) : '';
+$duracion = isset($_POST['duracion']) ? trim(strtoupper($_POST['duracion'])) : '';
+$id_censura = isset($_POST['id_censura']) ? trim(strtoupper($_POST['id_censura'])) : '';
+$pagina_web = isset($_POST['pagina_web']) ? trim(strtoupper($_POST['pagina_web'])) : '';
+$id_genero = isset($_POST['id_genero']) ? trim(strtoupper($_POST['id_genero'])) : '';
+$sinopsis = isset($_POST['sinopsis']) ? trim(strtoupper($_POST['sinopsis'])) : '';
+$activo = isset($_POST['activo']) ? $_POST['activo'] : '';
+$nombre_buscar = isset($_GET['nombre_buscar']) ? $_GET['nombre_buscar'] : '';
+$activo = ($activo == 'on') ? 1 : 0;
+ 
+$pag = isset($_GET['pag']) ? $_GET['pag'] : 1;
+$cant_registros = 25;
+
+$where = 0;
+$qry = "SELECT p.id_pelicula, nombre_espanol, nombre_corto, nombre_ingles, id_distribuidor, duracion, 
+		id_censura, pagina_web, id_genero, sinopsis, activo, MAX(porcentaje) as porcentaje ,foto,video,listar_video
+				FROM tbl_pelicula p LEFT JOIN tbl_pelicula_distribuidor d ON p.id_pelicula = d.id_pelicula ";
+
+if(strlen($nombre_buscar) > 0):
+	$qry .= "WHERE nombre_espanol like '%$nombre_buscar%' ";
+	$where = 1;
+endif;
+if(strlen($nombre_espanol) > 0):
+	$qry .= "WHERE nombrel like '%$nombre_espanol%' ";
+	$where = 1;
+endif;
+if(strlen($nombre_corto) > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "nombre_corto like '%$nombre_corto%' ";
+	$where = 1;
+endif;
+if($nombre_ingles > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "nombre_ingles like '%$nombre_ingles%' ";
+	$where = 1;
+endif;
+if($id_distribuidor > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "id_distribuidor = id_distribuidor ";
+	$where = 1;
+endif;
+if($duracion > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "duracion = $duracion ";
+	$where = 1;
+endif;
+if($id_censura > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "censura = $censura ";
+	$where = 1;
+endif;
+if(strlen($pagina_web) > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "pagina_web like '%$pagina_web%' ";
+	$where = 1;
+endif;
+if($id_genero > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "id_genero = $id_genero ";
+	$where = 1;
+endif;
+if($activo > 0):
+	$qry .= ($where == 0) ? 'WHERE ' : 'AND ';
+	$qry .= "activo = $activo ";
+endif;
+$qry .= " GROUP BY p.id_pelicula, nombre_espanol, nombre_corto, nombre_ingles, id_distribuidor, duracion, 
+		id_censura, pagina_web, id_genero, sinopsis, activo ORDER BY id_pelicula DESC ";
+
+$result = mysql_query($qry, $cnn) or die("Error 2005: ".mysql_error());
+$registros = mysql_num_rows($result);
+
+$inicio = ($pag==1) ? 0 : ($pag - 1) * $cant_registros; 
+$qry .= "LIMIT $inicio, $cant_registros ";
+$result = mysql_query($qry, $cnn) or die("Error 2005: ".mysql_error());
+$total_paginas = ceil($registros / $cant_registros); 
+?>
+
+<table width="100%" cellpadding="1" cellspacing="1">
+<form name="buscar_pelicula" action="" method="get">
+<tr>
+	<td colspan="8" height="35" width="100%"><table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td width="80" class="css-label-metadata">Pel&iacute;cula</td>
+            <td width="180" class="css-label-metadata"><input type="text" class="css-campo-metadata" name="nombre_buscar" value="<?php echo $nombre_buscar;?>" size="40"></td>
+            <td class="css-label-metadata" align="left"><input type="submit" class="css-boton-metadata" name="pelicula_buscar" value="Buscar"></td>
+            <td align="right" height="24" style="float: right">
+            <?php
+
+            if(($_SESSION['NIVEL']==1)||($_SESSION['NIVEL']==7)||($_SESSION['NIVEL']==3)||($_SESSION['NIVEL']==2)){
+            	?>
+            <a href="<?php echo $modulo;?>" class="link-nuevo">Nuevo Registro</a>
+            <?php
+        	}
+        	else{$modulo="#";}
+        	?>
+            <input type="hidden" name="modulo" value="pelicula" />
+            <input type="hidden" name="sub" value="buscar" />
+            <img src="images/tr.gif" /></td>
+        </tr>
+    </table></td>
+</tr>
+</form>
+<tr>
+	<th width="8%" class="css-titulo-metadata">C&oacute;digo</th>
+	<th width="26%" class="css-titulo-metadata">Nombre en Espa&ntilde;ol</th>
+	<th width="26%" class="css-titulo-metadata">Nombre en Ingles</th>
+	<th width="10%" class="css-titulo-metadata">Duraci&oacute;n</th>
+	<th width="10%" class="css-titulo-metadata">% Dist.</th>
+	<th width="10%" class="css-titulo-metadata">Activo</th>
+	<th width="10%" class="css-titulo-metadata">Foto</th>
+	<th width="10%" class="css-titulo-metadata">Video</th>
+	<th width="10%" class="css-titulo-metadata"><img src="images/tr.gif"></th>
+</tr>
+<?php
+$table = '';
+$linea = 0;
+$bgcolor_select = "'#FFCC99'";
+while($campo = mysql_fetch_object($result)){
+	if($linea == 0):
+		$bgcolor = "'#DDDDDD'";
+		$linea = 1;
+	else:
+		$bgcolor = "'#CCCCCC'";
+		$linea = 0;
+	endif;
+
+	$table .= "<a href='".$modulo."&idp=$campo->id_pelicula'>"."\n";
+	$table .= "<tr bgcolor=$bgcolor ".rowSelect($bgcolor,'out')." ". rowSelect($bgcolor_select,'over') ." >"."\n";
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$campo->id_pelicula</a></td>"."\n";
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$campo->nombre_espanol</a></td>"."\n";
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$campo->nombre_ingles</a></td>"."\n";
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$campo->duracion</a></td>"."\n";
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$campo->porcentaje</a></td>"."\n";	
+	$x_activo = $campo->activo == 0 ? 'No Activo' : 'Activo';
+	$table .= "<td align='center'><a href='".$modulo."&idp=$campo->id_pelicula' class='css-datos-consulta'>$x_activo</a></td>"."\n";
+	$a="";
+	if ($campo->foto!="") $a="2";
+	$table .= "<td align='center'><a href='mantenimiento.php?modulo=peliculafoto&idp=$campo->id_pelicula' class='css-datos-consulta'><img src='images/camara$a.png' width='20' ></a></td>"."\n";
+	$a="";
+	$xx="No";
+	$color="white";
+	////modificacion video
+	if ($campo->video=="") $a="2";
+	if ($campo->listar_video==2){
+		$xx="Si";	
+		$color="#00ff00";
+	
+	} 
+	$table .= "<td align='center'><a href='mantenimiento.php?modulo=peliculavideo&idp=$campo->id_pelicula' class='css-datos-consulta'><img src='images/video$a.png' width='20' ></a></td>"."\n";
+	$table .= "<td bgcolor='$color'>$xx</td>"."\n";
+	$table .= "</tr>"."\n";
+	$table .= "</a>"."\n";
+}
+echo $table;
+?>
+<tr>
+	<td colspan="5" height="35" align="center" class="css-datos-consulta">
+		<?php
+		for ($i=1; $i<=$total_paginas; $i++){ 
+			if ($pag == $i) { 
+				echo "<b>".$pag."</b> | "; 
+			} else { 
+				echo "<a href='$modulo&sub=buscar&pag=$i' class='css-datos-consulta'>$i</a> | "; 
+			} 
+		}
+		?>
+    </td>
+</tr>
+</table>

@@ -1,0 +1,103 @@
+.pelicula-nombre {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+.total-pelicula {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.cine-nombre {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+}
+.info {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+.pelicula-total {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #666666;
+	background-color: #666666;
+	font-weight: bold;
+}
+.cine-total {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #333333;
+	border-top-width: 3px;
+	border-top-style: double;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #666666;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.fecha {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #666666;
+}
+.titulo-reporte {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #333333;
+}
+.mensaje-consulta {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #990000;
+}
+
+.imprimir {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#999999;
+}
+.info-total {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #999999;
+}
+.info-total2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	border-top-width: 1px;
+	border-top-style: double;
+	border-top-color: #999999;
+	background-color: #CCCCCC;
+}
+.total2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	border-top-width: 1px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #666666;
+}

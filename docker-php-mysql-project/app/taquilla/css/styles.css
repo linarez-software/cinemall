@@ -1,0 +1,122 @@
+a:hover{color:#FFFFFF;}
+a:link{text-decoration: none;}
+a:active{text-decoration: none; }
+a:visited{text-decoration: none; }
+
+.campo-login {
+	background-image: url(../images/campo-login.gif);
+	background-color: #FFFFFF;
+	border: 0px none #FFFFFF;
+	height: 35px;
+	width: 178px;
+	background-position: center;
+	font-weight:bold;
+	padding-bottom:5px;
+	padding-top:6px;
+	
+	padding-right:12px;
+	margin-right: 6px;
+	margin-left: 5px;
+	font-family: Tahoma, sans-serif;
+	font-size: 15px;
+	color: #666666;
+	text-align:center;
+}
+.boletos-campo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #990000;
+	border: 1px inset #999999;
+	text-align:center;
+}
+
+.css-label-login {
+	font-family: Tahoma, sans-serif;
+	font-size: 9px;
+	color: #999999;
+	font-style: italic;
+}
+.login-boton {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #666666;
+}
+
+.css-titulo-lista {
+	font-family: Tahoma, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	background-color:#000071;
+	color: #FFFFFF;
+}
+.css-datos-lista {
+	font-family: Tahoma, sans-serif;
+	font-size: 16px;
+	color:#333333;
+	font-weight:bold;
+	background-color:#FFCC66;
+}
+.css-pelicula {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	color:#333333;
+	font-weight:bold;
+	background-color:#FFCC66;
+}
+.css-datos-funciones {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	color: #0033CC;
+	background-color: #CCCCCC;
+}
+.css-datos-funciones-2 {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	color: #0033CC;
+}
+.precios-titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #FF9900;
+}
+.precios-precios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF
+}
+.led-borde {
+	border: 1px inset #666666;
+}
+.led-texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #003366;
+}
+.led-total {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	color: #009900;
+}
+
+
+.boletos-boton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	color: #666666;
+	border: 1px inset #333333;
+}
+.fecha-head {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: italic;
+	color: #FF6600;
+}
+.numerada {
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #FF6600;
+}

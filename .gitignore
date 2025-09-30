@@ -1,0 +1,36 @@
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment files
+.env
+docker-php-mysql-project/app/.env
+
+# Docker volumes and data
+docker-php-mysql-project/mysql_data/
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# PHP
+vendor/
+composer.phar
+
+# Database dumps (keep example schema)
+*.sql
+!docker-php-mysql-project/docker/mysql/init.sql
+
+# Cache and session files
+cache/
+sessions/
+*.cache

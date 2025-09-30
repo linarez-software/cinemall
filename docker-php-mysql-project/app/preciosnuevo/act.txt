@@ -1,0 +1,4 @@
+CREATE TABLE `aux_pro` (
+  `descripcion` varchar(50) DEFAULT NULL,
+  `precio` decimal(12,2) DEFAULT NULL
+) ENGINE=MyISAM

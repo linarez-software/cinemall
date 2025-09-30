@@ -1,0 +1,36 @@
+.pelicula {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight:800;
+	background-color:#FF8D1C;
+	color:#FFFFFF;	
+}
+
+.censura {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight:600;
+	font-variant: inherit;
+	background-color:#FFFFCC;
+	color: #FFA953;
+}
+
+.marquee {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.funcion-disponible {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+
+.funcion-agotada {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	color:#FF0000;
+	font-weight:bold;
+}

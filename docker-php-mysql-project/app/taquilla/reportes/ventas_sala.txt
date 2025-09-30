@@ -1,0 +1,9 @@
+SELECT tper.nombre AS precio, t.costo, SUM( t.cantidad_transaccion ) AS boletos, SUM( t.total_transaccion ) AS monto, tpe.nombre_espanol AS pelicula, ts.nombre AS sala, tc.nombre AS cine, t.id_programacion, t.id_precio, tp.id_cine, tp.id_sala, tp.id_pelicula, tp.hora_inicio, tp.fecha_programacion
+FROM tbl_operacion t
+INNER JOIN tbl_programacion tp ON t.id_programacion = tp.id_programacion
+INNER JOIN tbl_pelicula tpe ON tp.id_pelicula = tpe.id_pelicula
+INNER JOIN tbl_sala ts ON tp.id_sala = ts.id_sala
+INNER JOIN tbl_cine tc ON tp.id_cine = tc.id_cine
+INNER JOIN tbl_precio tper ON t.id_precio = tper.id_precio
+GROUP BY tper.nombre, t.costo, tpe.nombre_espanol, ts.nombre, tc.nombre, t.id_programacion, t.id_precio, tp.id_cine, tp.id_sala, tp.id_pelicula, tp.hora_inicio, tp.fecha_programacion
+ORDER BY ts.nombre, tp.hora_inicio, tper.nombre

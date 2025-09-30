@@ -1,0 +1,343 @@
+
+.boxText {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.errorBox {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: white; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.stockWarning {
+	FONT-SIZE: 10px; COLOR: crimson; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+BODY {
+	BACKGROUND: #ffffff; MARGIN: 0px; COLOR: black
+}
+A {
+	COLOR: black; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #7848d0; TEXT-DECORATION: underline
+}
+FORM {
+	DISPLAY: inline
+}
+TR.header {
+	BACKGROUND: #003090
+}
+TR.headerNavigation {
+	BACKGROUND: white
+}
+TD.headerNavigation {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: black; COLOR: white; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+A.headerNavigation {
+	COLOR: white
+}
+TR.headerError {
+	BACKGROUND: #ff0000
+}
+TD.headerError {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: #ff0000; COLOR: #000080; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif; TEXT-ALIGN: center
+}
+TR.headerInfo {
+	BACKGROUND: #000000
+}
+TD.headerInfo {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #003090; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif; TEXT-ALIGN: center
+}
+TR.footer {
+	BACKGROUND: #000030
+}
+TD.footer {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #000030; COLOR: #c0c0c0; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TABLE.infoBox {
+	BACKGROUND: #000030
+}
+TABLE.infoBoxContents {
+	BACKGROUND: #ffffff
+}
+TD.infoBoxHeading {
+	FONT-SIZE: 10px; BACKGROUND: #c0c0c0; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.infoBox {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SPAN.infoBox {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TR.accountHistory-odd {
+	BACKGROUND: #ffffff
+}
+TR.addressBook-odd {
+	BACKGROUND: #ffffff
+}
+TR.alsoPurchased-odd {
+	BACKGROUND: #ffffff
+}
+TR.payment-odd {
+	BACKGROUND: #ffffff
+}
+TR.productListing-odd {
+	BACKGROUND: #ffffff
+}
+TR.productReviews-odd {
+	BACKGROUND: #ffffff
+}
+TR.upcomingProducts-odd {
+	BACKGROUND: #ffffff
+}
+TR.shippingOptions-odd {
+	BACKGROUND: #ffffff
+}
+TR.accountHistory-even {
+	BACKGROUND: #ffffff
+}
+TR.addressBook-even {
+	BACKGROUND: #ffffff
+}
+TR.alsoPurchased-even {
+	BACKGROUND: #ffffff
+}
+TR.payment-even {
+	BACKGROUND: #ffffff
+}
+TR.productListing-even {
+	BACKGROUND: #ffffff
+}
+TR.productReviews-even {
+	BACKGROUND: #ffffff
+}
+TR.upcomingProducts-even {
+	BACKGROUND: #ffffff
+}
+TR.shippingOptions-even {
+	BACKGROUND: #ffffff
+}
+TR.productListing-heading {
+	BACKGROUND: #8040b0
+}
+TD.productListing-heading {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: #c0c0c0; COLOR: #000080; FONT-FAMILY: Verdana, Arial, sans-serif; FONT-VARIANT: small-caps
+}
+TD.productListing-data {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+A.pageResults {
+	COLOR: white
+}
+A.pageResults:hover {
+	BACKGROUND: white; COLOR: #7848d0
+}
+TD.pageHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #003090; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+DIV.pageHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #003090; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TR.subBar {
+	BACKGROUND: #7848d0
+}
+TD.subBar {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.main {
+	FONT-SIZE: 11px; LINE-HEIGHT: 1.5; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+P.main {
+	FONT-SIZE: 11px; LINE-HEIGHT: 1.5; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.smallText {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SPAN.smallText {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.accountCategory {
+	FONT-SIZE: 13px; COLOR: #aabbdd; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.fieldKey {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.fieldValue {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.tableHeading {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SPAN.newItemInCart {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+CHECKBOX {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+INPUT {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+RADIO {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SELECT {
+	FONT-SIZE: 11px; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 11px; WIDTH: 100%; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SPAN.greetUser {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #f0a480; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TABLE.formArea {
+	BORDER-RIGHT: #003090 1px solid; BORDER-TOP: #003090 1px solid; BACKGROUND: #ffffff; BORDER-LEFT: #003090 1px solid; BORDER-BOTTOM: #003090 1px solid
+}
+TD.formAreaTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif
+}
+SPAN.markProductOutOfStock {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #c76170; FONT-FAMILY: Tahoma, Verdana, Arial, sans-serif
+}
+SPAN.productSpecialPrice {
+	COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+TD.checkoutBar {
+	FONT-SIZE: 10px; COLOR: #aabbdd; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+SPAN.checkoutBarHighlighted {
+	FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, sans-serif
+}
+.taulaA {
+	BORDER-RIGHT: #353a90 1px solid; BORDER-TOP: #353a90 1px solid; FONT-SIZE: 10px; BACKGROUND: #ffffff; BORDER-LEFT: #353a90 1px solid; COLOR: #000000; BORDER-BOTTOM: #353a90 1px solid; FONT-FAMILY: Verdana
+}
+
+.cabecera {
+	FONT-SIZE: 10px; BACKGROUND: #353a90; COLOR: #ffffff; FONT-FAMILY: verdana
+}
+.f1blkbg2 {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #3366cc
+}
+
+.body {
+	SCROLLBAR-FACE-COLOR: #f0f0f0; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #7d7d7d; SCROLLBAR-3DLIGHT-COLOR: #a0a0a0; SCROLLBAR-ARROW-COLOR: #ff6600; SCROLLBAR-TRACK-COLOR: #fafafa; SCROLLBAR-DARKSHADOW-COLOR: #ffffff
+}
+
+.art {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #0099ff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.le:hover {
+	FONT-WEIGHT: normal; COLOR: #ffff00; TEXT-DECORATION: none
+}
+.le {
+	FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tit {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.titulo {
+	FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.cab {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.ftext {
+	FONT-SIZE: 11px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.foot {
+	FONT-SIZE: 9px; COLOR: #333333; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.tch {
+	FONT-SIZE: 9px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.t {
+	FONT-SIZE: 10px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.boton {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #ffffff 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 10px; BORDER-LEFT: #ffffff 1px solid; CURSOR: pointer; COLOR: #000000; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Tahoma, Verdana, Arial; LETTER-SPACING: 1px; HEIGHT: 19px; BACKGROUND-COLOR: #c9d6f1; TEXT-DECORATION: none
+}
+.info {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #006699; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.info:hover {
+	COLOR: #df0029; TEXT-DECORATION: underline
+}
+.orden {
+	FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #006699
+}
+.link {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.link:hover {
+	COLOR: #df0029; TEXT-DECORATION: underline
+}
+.tit:hover {
+	COLOR: #df0029; TEXT-DECORATION: underline
+}
+.ampliar {
+	FONT-SIZE: 9px; COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.ampliar:hover {
+	COLOR: #df0029; TEXT-DECORATION: underline
+}
+.input {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 10px; BORDER-LEFT: #999999 1px solid; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #f7f7f7
+}
+.menu {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 10pt; BORDER-LEFT-COLOR: #003366; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #003366; BORDER-TOP-COLOR: #003366; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #006699; BORDER-RIGHT-WIDTH: 1px; BORDER-RIGHT-COLOR: #003366
+}
+.marca {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #df0029; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.marca:hover {
+	COLOR: #bebebe; TEXT-DECORATION: underline
+}
+.tablaimg {
+	BORDER-RIGHT: #bebebe 1px solid; BORDER-TOP: #bebebe 1px solid; BORDER-LEFT: #bebebe 1px solid; BORDER-BOTTOM: #bebebe 1px solid
+}
+.lintop {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.lintop:hover {
+	COLOR: #cccccc; TEXT-DECORATION: underline
+}
+.tnos {
+	FONT-SIZE: 11px; COLOR: #535353; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.linkaz {
+	COLOR: #0066cc; TEXT-DECORATION: underline
+}
+.linkaz:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.login {
+	BACKGROUND-COLOR: #eeeeee
+}
+.usr {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.tazb {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #0066cc; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.lnbl {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+.lnbl:hover {
+	COLOR: #cccccc
+}
+.lnng {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.lnng:hover {
+	COLOR: #0066cc
+}
+.titbl {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+.taz {
+	COLOR: #0066cc
+}
+.tngb {
+	FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.tr {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 11px; PADDING-BOTTOM: 5px; COLOR: #ffffff; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.tr2 {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-SIZE: 9px; PADDING-BOTTOM: 5px; COLOR: #ffffff; PADDING-TOP: 5px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}

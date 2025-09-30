@@ -1,0 +1,120 @@
+@font-face {
+	font-family: "Berlin Sans FB Demi";
+	src: url(../fonts/BRLNSDB.TTF) format("opentype");
+}
+.peliculaw {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight:800;
+	background-color:#FF8D1C;
+	color:#FFFFFF;	
+}
+
+.censura2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight:600;
+	/* background-color:#FFFFCC; */
+	background: url(../images/bg-logo.jpg);
+	color:#FFFFFF;
+	border:#FFFFFF solid 1px;
+	background-color:#990000;
+	width:34px;
+}
+
+.marquee {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+.funcion-disponible {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	color:#000000;
+	font-weight:500;
+}
+
+.funcion-agotada {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 23px;
+	color:#FF0000;
+	font-weight:bold;
+}
+
+html, body {
+	background-color:#000000;
+	margin: 0px;
+	font-family: Helvetica, Arial, Verdana, sans-serif; /*Trebuchet MS,*/
+	height:99%;
+	overflow:hidden; 
+}
+
+.censura{
+	font-size:larger;
+	font-weight:bold;
+	background: url(../images/bg-logo.jpg);
+	/* background-color:#FFFFCC;*/
+	color:#FFFFFF;
+	border:#FF9900 solid 3px;
+	text-align:center;
+	width:35px;
+}
+.hora {
+	background-color:#FFFFCC;
+	border:#FF9900 solid 3px;
+	color:#990000;
+	text-align:center;
+	font-size:44px;
+}
+.liveclock{
+	color:#990000;
+	text-align:right;
+}
+.logo {
+	background: url(../images/bg-logo.jpg);
+	text-align:center;
+	border:#FF9900 solid 3px;
+	font-size:xx-large;
+	font-weight:bold;
+}
+
+#tabla-pelicula tr{
+	/* background-color:#006699; */
+	background-color:#FFFFCC; 
+}
+
+#tabla-pelicula tr.par{
+	background-color:#CCCCCC;
+}
+
+#tabla-pies {
+	color:#000000;
+}
+#tabla-pelicula .pelicula {
+	/*font-family:"Berlin Sans FB Demi";*/
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	font-size:26px;
+	padding-left:5px;
+	color:#000000;
+	font-weight:bold;
+}
+.precio {
+	color:#FFFF00;
+	font-size:28px;
+	font-weight:bold;
+}
+.precio-detalle {
+	color:#FFFFFF;
+	font-size:22px;
+	font-variant:small-caps;
+}
+.borde-izquierdo{
+	border-left:solid 1px #999999;
+}
+.borde-derecho{
+	border-right:solid 1px #999999;
+}
+.borde-abajo{
+	border-bottom:solid #999999 1px;
+}

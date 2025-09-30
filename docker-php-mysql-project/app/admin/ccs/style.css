@@ -1,0 +1,98 @@
+a:hover{color:#FFFFFF;}
+a:link{text-decoration: none;}
+a:active { text-decoration: none; }
+a:visited { text-decoration: none; }
+
+.css-titulo-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background:url(../images/tr_anaranjado.gif)
+}
+.css-label-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	font-weight: bold;
+}
+.css-campo-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+.css-mensaje-advertencia {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #990000;
+}
+
+.css-campo-metadata-id {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	color: #666666;
+	background-color: #FFF2E6;
+}
+.css-programacion-fecha {
+	font-family: Tahoma, sans-serif;
+	font-size: 14px;
+	color: #666666;
+}
+
+.css-sala {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #CCCCCC;
+	background-color: #003366;
+}
+
+.css-boton-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #003399;
+}
+.css-info-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.css-datos-consulta {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+.css-titulo-menu {
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../images/tr_azul.gif);
+	text-align: center;
+}
+.css-subtitulo-menu {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-image: url(../images/tr_gris.gif);
+}
+.css-elemento-menu {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	color: #666666;
+}
+.css-mensaje-metadata {
+	font-family: Tahoma, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #003366;
+}
+.css-menu {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666666;
+}
