@@ -6,10 +6,11 @@ Archivo:		bd.inc.php (Centralized)
 Descripcion:	Conexión Server - Centralized Database Configuration
 */
 
-$SERVER = '127.0.0.1:3406';
-$USER = 'manager';
-$PASSWORD = '4dm1n';
-$DB = 'cine_plus';
+// Use environment variables if available, otherwise fall back to defaults
+$SERVER = getenv('DB_SERVER') ?: 'mysql';
+$USER = getenv('DB_USER') ?: 'manager';
+$PASSWORD = getenv('DB_PASSWORD') ?: '4dm1n';
+$DB = getenv('DB_NAME') ?: 'cine_plus';
 
 $cnn = @mysql_connect($SERVER, $USER, $PASSWORD) or die('Error 1001: ' . mysql_error());
 

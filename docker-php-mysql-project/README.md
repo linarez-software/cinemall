@@ -10,27 +10,47 @@ A dockerized development environment with PHP 5.6.40, MySQL 5.5.60, and phpMyAdm
 
 ## Quick Start
 
-1. Start the services:
+1. **Copy the environment file**:
+```bash
+cp .env.example .env
+```
+
+2. **Configure your credentials** (optional):
+Edit `.env` file to change database credentials and ports.
+
+3. **Start the services**:
 ```bash
 docker-compose up -d
 ```
 
-2. Access the applications:
+4. **Access the applications**:
 - PHP Application: http://localhost:8080
 - phpMyAdmin: http://localhost:8081
 - MySQL: localhost:3306
 
-## Default Credentials
+## Environment Configuration
 
-### MySQL
-- Root Password: `rootpassword`
-- Database: `mydb`
-- User: `dbuser`
-- Password: `dbpassword`
+All sensitive credentials are stored in the `.env` file (not committed to git).
 
-### phpMyAdmin
-- Username: `root`
-- Password: `rootpassword`
+### Default Configuration (.env.example)
+
+```bash
+# Database Configuration
+MYSQL_ROOT_PASSWORD=rootpassword
+MYSQL_DATABASE=cine_plus
+MYSQL_USER=manager
+MYSQL_PASSWORD=4dm1n
+MYSQL_HOST=mysql
+MYSQL_PORT=3306
+
+# Application Database Configuration
+DB_SERVER=mysql
+DB_USER=manager
+DB_PASSWORD=4dm1n
+DB_NAME=cine_plus
+```
+
+**Important**: The application automatically uses environment variables for database connection. No need to edit PHP files.
 
 ## Project Structure
 

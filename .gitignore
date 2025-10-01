@@ -7,7 +7,7 @@
 *~
 
 # Environment files
-.env
+docker-php-mysql-project/.env
 docker-php-mysql-project/app/.env
 
 # Docker volumes and data
